@@ -60,7 +60,7 @@
 .nav-links {
   display: flex;
   justify-content: flex-end;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -75,16 +75,16 @@
 }
 
 .nav-links a:hover {
-  color: #4d26bb;
+  color: black;
 }
 
 .contact-btn {
-  background-color: #4f10fb;
+  background-color: #003366;
+  border:1px solid white;
   color: #fff;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  margin-left: 10px;
-  border-radius: 5px;
+  padding: 0.8rem 1rem; 
+  margin-left: 30px;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -92,5 +92,5 @@
 }
 
 .contact-btn:hover {
-  background-color: #4d26bb;
+  background-color: #092744;
 }
