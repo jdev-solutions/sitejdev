@@ -1,4 +1,3 @@
-import React from 'react';
 import jdevlogo from '../../../public/logo-principal.svg';
 import './styles.css';
 
