@@ -1,4 +1,4 @@
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -32,4 +32,65 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.header {
+  background-color: #003366;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1280px; /* Seguindo a largura do #root */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem; /* Margens internas para espaçamento */
+}
+
+.logo {
+  height: 100px;
+}
+
+.navbar {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4d26bb;
+}
+
+.contact-btn {
+  background-color: #4f10fb;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #4d26bb;
 }

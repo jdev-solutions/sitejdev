@@ -1,22 +1,28 @@
-import jdevlogo from '../../../public/logo-principal.svg'
-import './styles.css'
+import React from 'react';
+import jdevlogo from '../../../public/logo-principal.svg';
+import './styles.css';
 
 function Header() {
-
   return (
-    <>
-        <div>
-            <a href="https://jdev" target="_blank">
-                <img src={jdevlogo} className="logo" alt="Vite logo" />
-            </a>
-            <ul>
-                <li>teste</li>
-                <li>teste</li>
-                <li>teste</li>
-            </ul>   
-        </div>
-    </>
-  )
+    <header className="header">
+      <div className="container">
+        <a href="/" className="logo-link">
+          <img src={jdevlogo} className="logo" alt="JDev Logo" />
+        </a>
+        <nav className="navbar">
+          <ul className="nav-links">
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#about-us">Sobre nós</a></li>
+            <li><a href="#courses">Cursos</a></li>
+            <li><a href="#commitment">Compromisso</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+          </ul>
+        </nav>
+        <button className="contact-btn">Entre em contato</button>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
