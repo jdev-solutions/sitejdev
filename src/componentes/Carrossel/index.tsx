@@ -1,46 +1,57 @@
  import './styles.css';
-import Slider from '../commons/Slider/Slider'
-import { SwiperProps, SwiperSlide } from 'swiper/react';
+ import React, { useState } from "react";
 
-import img1 from '../../assets/imgfundo1.png';
-import img2 from '../../assets/imgfundo2.png';
-import img3 from '../../assets/imgfundo3.png';
+import imgCarr from '../../assets/Frame 92.png';
+import img2Carr from '../../assets/Frame 97.png';
+import img3Carr from '../../assets/Frame 98.png';
+
+const images = [
+  imgCarr,
+  img3Carr,
+  img2Carr
+];
 
 function Carrossel() {
-  const settings: SwiperProps = {
-    spaceBetween: 50,
-    loop: true,
-    slidesPerView: 1,
-    navigation: true,
-    autoplay: {
-      delay: 5000,
-    },
-    pagination: {
-        clickable: true,
-    }
-  }
-  
+
+   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
   return (
-    <section className="carousel-section">
-      <Slider settings={settings}>
-        <SwiperSlide>
-          <div className="slide" style={{ backgroundImage: `url(${img1})` }}>
-            <h2>Bem-vindo à JDev Solutions</h2>
+    <div className="carousel">
+      <div
+        className="carousel-container"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+        }}
+      >
+        {images.map((src, index) => (
+          <div
+            className={`carousel-item ${
+              index === currentIndex ? "active" : ""
+            }`}
+            key={index}
+          >
+            <img className="teste" src={src} alt={`Slide ${index + 1}`} />
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide" style={{ backgroundImage: `url(${img2})` }}>
-            <h2>Transformando ideias em realidade</h2>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide" style={{ backgroundImage: `url(${img3})` }}>
-            <h2>Sites, sistemas e aplicativos personalizados</h2>
-          </div>
-        </SwiperSlide>
-      </Slider>
-    </section>
+        ))}
+      </div>
+      <button className="carousel-btn prev" onClick={handlePrev}>
+        &lt;
+      </button>
+      <button className="carousel-btn next" onClick={handleNext}>
+        &gt;
+      </button>
+    </div>
   );
-}
+};
 
 export default Carrossel;

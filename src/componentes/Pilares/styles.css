@@ -1,32 +1,50 @@
-.main{
+.main-pilares{
   background-color: white;
   padding: 1 0;
+  max-width: 1200px;
+  margin: auto;
 }
-.subtitle{
-  margin: 100px 0 70px 200px;
+.subtitle-pilares{
+  margin: auto;
+  margin: 5rem 0;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
 } 
-.box{
-    max-width: 1000px; 
+.box-pilares{
+    margin: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem; 
+    margin: auto;
+    gap: 0;
+    width: 1000px;
 }
-.servicos{
+.pilares-1{
   margin: auto;
   margin-bottom: 50px;
-  max-width: 1100px;
+  width: 600px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 2rem;
 }
-.serv{
+.pilares-2{
+  margin: auto;
+  margin-bottom: 50px;
+  width: 600px;
   display: flex;
-  width: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.pil{
+  display: flex;
+  width: 350px;
   height: 200px;
   background-color: #003366;
   display: flex;
@@ -36,17 +54,17 @@
   border-radius: 20px;
   padding: 0px 20px;
 }
-.serv:hover{
+.pil:hover{
   background-color: #092744;
 }
-.serv > span, p{
+.pil > span, p{
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
-.serv > span{
+.pil > span{
   font-size: 1.4em;
   line-height: 25px;
 }
-img{
+.pil > img{
   margin: auto;
 }

@@ -1,62 +1,46 @@
-/* .carousel-section {
-  width: 100%;
-  height: 500px;
+.carousel {
   position: relative;
-}
-
-.slide {
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.slide h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.swiper-pagination-bullet {
-  background: #FB8510;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-} */
-
-.carousel-section {
-  width: 100%;
-  height: 100%;
+  margin: auto;
+  height: 500px; /* Ajusta a altura conforme o conteúdo */
   overflow: hidden;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
+.carousel-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: transform 0.5s ease-in-out;
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
 }
 
-.slide h2 {
-  font-size: 2rem;
+.carousel-item {
+  min-width: 100%; /* Garante que cada slide ocupe 100% da largura */
+  height: 100%; /* Ajusta a altura conforme o contêiner */
+}
+
+.carousel .teste {
+  width: 100%; /* Ajusta a imagem para ocupar toda a largura */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
 }

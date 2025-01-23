@@ -3,6 +3,11 @@ import Header from './componentes/Header'
 import Carrossel from './componentes/Carrossel'
 import Servicos from './componentes/Servicos'
 import SobreNos from './componentes/SobreNos'
+import Cursos from './componentes/Cursos'
+import Compromisso from './componentes/Compromisso'
+import Pilares from './componentes/Pilares'
+import Contato from './componentes/Contato'
+import Footer from './componentes/Footer'
 
 function App() {
 
@@ -12,6 +17,11 @@ function App() {
       <Carrossel />
       <Servicos />
       <SobreNos />
+      <Cursos />
+      <Compromisso />
+      <Pilares />
+      <Contato />
+      <Footer />
     </>
   )
 }
