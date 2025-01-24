@@ -11,14 +11,13 @@ function Header() {
         <nav className="navbar">
           <ul className="nav-links">
             <li><a href="#services">Serviços</a></li>
-            <li><a href="#about-us">Sobre nós</a></li>
+            <li><a href="#aboutUs">Sobre nós</a></li>
             <li><a href="#courses">Cursos</a></li>
             <li><a href="#commitment">Compromisso</a></li>
             <li><a href="#contact">Contato</a></li>
-            <li><a href="#faq">Dúvidas</a></li>
           </ul>
         </nav>
-        <button className="contact-btn">Entre em contato</button>
+        <a href="https://wa.me/5511947647670?text=Olá!%20Quero%20fazer%20um%20orçamento!"target="_blank"><button className="contact-btn">Entre em contato</button></a>
       </div>
     </header>
   );

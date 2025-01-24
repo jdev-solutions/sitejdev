@@ -36,3 +36,51 @@ img{
   font-weight: lighter;
   padding-left: 0px;
 }
+
+
+@media (max-width: 768px) {
+  .subtitle-cursos {
+    font-size: 1.8rem;
+    margin: 30px 0;
+  }
+
+  .cursos-h3 {
+    font-size: 1.2rem;
+  }
+
+  .cursos-box {
+    gap: 15px;
+    border-width: 3px; /* Reduz a espessura da borda */
+    max-width: 90%; /* Expande o box para ocupar mais espaço na tela */
+  }
+
+  img {
+    max-width: 6rem;
+  }
+
+  .cursos-p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle-cursos {
+    font-size: 1.5rem;
+  }
+  .cursos-box{
+    width: 70%;
+    margin: auto;
+    height: 300px;
+  }
+  .cursos-h3 {
+    font-size: 1rem;
+  }
+
+  .cursos-p {
+    font-size: 1.2rem;
+  }
+
+  img {
+    max-width: 4.5rem; /* Reduz ainda mais as imagens */
+  }
+}

@@ -7,7 +7,7 @@ import boss from '../../assets/pexels-fauxels-3184291 1.png'
 
 function Compromisso() {
   return (
-    <header className="compro-main">
+    <header className="compro-main" id='commitment'>
         <h2>Compromisso</h2>
         <h3>Ajudamos a crescer sua empresa</h3>
       <div className="box">

@@ -9,7 +9,7 @@ import video from '../../assets/video (2) 1.png'
 
 function Servicos() {
   return (
-    <header className="main">
+    <header className="main" id='services'>
         <h2 className='subtitle'>Tudo para sua empresa</h2>
       <div className="box">
         <div className="servicos">

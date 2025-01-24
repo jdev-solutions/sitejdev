@@ -7,9 +7,9 @@ import img3 from '../../assets/pexels-vojtech-okenka-127162-392018 1.png';
 
 function SobreNos() {
   return (
-    <header className="main-sb">
-        <h2>Quem somos nós</h2>
-        <h3>Conheça a JDev</h3>
+    <header className="main-sb" id='aboutUs'>
+        <h2 className='sb-subtitle'>Quem somos nós</h2>
+        <h3 className='sb-mintitle'>Conheça a JDev</h3>
       <div className="box-sb">
         <div className='img-box'>
           <img src={img3} alt="imagem de um mouse" />

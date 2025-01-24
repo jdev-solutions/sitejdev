@@ -8,6 +8,7 @@ import Compromisso from './componentes/Compromisso'
 import Pilares from './componentes/Pilares'
 import Contato from './componentes/Contato'
 import Footer from './componentes/Footer'
+import { BarraAzul } from './componentes/BarraAzul'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Compromisso />
       <Pilares />
       <Contato />
+      <BarraAzul />
       <Footer />
     </>
   )

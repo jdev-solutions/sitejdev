@@ -1,9 +1,9 @@
  import './styles.css';
- import React, { useState } from "react";
+ import { useState } from "react";
 
-import imgCarr from '../../assets/Frame 92.png';
-import img2Carr from '../../assets/Frame 97.png';
-import img3Carr from '../../assets/Frame 98.png';
+import imgCarr from '../../assets/imagem1carrossel1.png';
+import img2Carr from '../../assets/imagem3carrossel3.png';
+import img3Carr from '../../assets/imagem2carrossel2.png';
 
 const images = [
   imgCarr,

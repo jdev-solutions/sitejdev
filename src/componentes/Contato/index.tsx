@@ -3,7 +3,7 @@ import './styles.css';
 
 function Contato() {
   return (
-    <header className="main-contato">
+    <header className="main-contato" id='contact'>
         <h2 className='subtitle-contato'>Faça um orçamento sem compromisso!</h2>
       <form action="contato-form">
         <div className="contato-box">
