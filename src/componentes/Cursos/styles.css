@@ -1,28 +1,30 @@
 .main-cursos{
-  background-color: white;
-  padding: 1 0;
-  max-height: 800px;
+  background-color: #0c4074;
+  max-height: 600px;
+  padding: 1rem;
 }
 .subtitle-cursos{
-  margin: 100px 0 20px 200px;
+  margin: 10px 20px 20px 200px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
+  color: white;
 } 
 .cursos-h3{
   margin-bottom: 40px;
+  color: white;
 }
 .cursos-box{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem; 
-    border: 5px solid #003366;
+    border: 5px solid white;
     border-radius: 20px;
     margin: auto;
     margin-bottom: 120px;
     max-width: 45rem;
     height: 25rem;
 }
+
 img{
   margin: auto;
 }
@@ -34,53 +36,57 @@ img{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
   font-weight: lighter;
+  color: white;
   padding-left: 0px;
 }
 
 
 @media (max-width: 768px) {
   .subtitle-cursos {
-    font-size: 1.8rem;
-    margin: 30px 0;
+    font-size: 2rem;
+    margin: 30px 0 20px 0 ;
+    text-align: center;
   }
-
   .cursos-h3 {
     font-size: 1.2rem;
+    margin: 0px 0 80px 0 ;
+    text-align: center;
   }
-
   .cursos-box {
     gap: 15px;
     border-width: 3px; /* Reduz a espessura da borda */
-    max-width: 90%; /* Expande o box para ocupar mais espaço na tela */
+    width: 85%; /* Expande o box para ocupar mais espaço na tela */
+    height: 300px;
   }
-
   img {
-    max-width: 6rem;
+    max-width: 4rem;
   }
-
   .cursos-p {
     font-size: 1.5rem;
   }
 }
-
-@media (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .subtitle-cursos {
-    font-size: 1.5rem;
-  }
-  .cursos-box{
-    width: 70%;
-    margin: auto;
-    height: 300px;
+    font-size: 2rem;
+    margin: 30px 0 20px 0 ;
+    text-align: center;
   }
   .cursos-h3 {
-    font-size: 1rem;
+    font-size: 2rem;
+    margin: 30px 0 50px 0 ;
+    text-align: center;
   }
-
-  .cursos-p {
-    font-size: 1.2rem;
+  .cursos-box {
+    gap: 15px;
+    border-width: 3px; /* Reduz a espessura da borda */
+    width: 85%; /* Expande o box para ocupar mais espaço na tela */
+    height: 300px;
   }
-
   img {
-    max-width: 4.5rem; /* Reduz ainda mais as imagens */
+    max-width: 4rem;
+  }
+  .cursos-p {
+    font-size: 3rem;
+    margin-right: 50px;
   }
 }

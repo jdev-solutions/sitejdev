@@ -5,7 +5,7 @@
   margin: auto;
 }
 .subtitle-contato{
-  margin: 100px 0 40px 200px;
+  margin: 50px 0 50px 200px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
 } 
@@ -42,16 +42,18 @@ label{
     height: 3rem;
     border-radius: 1rem;
     border: 2px solid gray;
+    padding: 0 20px;
   }
 }
 .input-box-2{
   display: flex;
   gap: 1rem;
-  textarea{
+  input{
     width: 30rem;
     height: 3rem;
     border-radius: 1rem;
     border: 2px solid gray;
+    padding: 0 55px 0 20px;
   }
 }
 .input-box-2 > button{
@@ -65,4 +67,105 @@ label{
 }
 .input-box-2 > button:hover{
   background-color: #092744;
+}
+
+@media (max-width: 768px) {
+
+  .main-contato {
+    width: 100%;
+  }
+
+  .subtitle-contato {
+    font-size: 2rem;
+    margin: 30px 0 20px 0 ;
+    text-align: center;
+  }
+
+  .contato-box {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  .input-box-1 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+  }
+
+  .input-box-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contato-box {
+    padding: 1rem;
+    margin-bottom: 60px;
+  }
+
+  .input-box-1 input {
+    width: 100%; /* Fazendo os inputs ficarem com largura total em telas pequenas */
+    margin-bottom: 1rem; /* Espaço entre os inputs */
+    margin: 0;
+  }
+
+  .input-box-2 input {
+    width: 70%; /* Tornando o input com largura total */
+    padding: 0 55px 0 20px;
+  }
+
+  .input-box-2 > button {
+    width: 100%; /* Botão com largura total */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  .main-contato {
+    width: 100%;
+  }
+
+  .subtitle-contato {
+    font-size: 2rem;
+    margin: 30px 0 20px 0 ;
+    text-align: center;
+  }
+
+  .contato-box {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  .input-box-1 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+  }
+
+  .input-box-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contato-box {
+    padding: 1rem;
+    margin-bottom: 60px;
+  }
+
+  .input-box-1 input {
+    width: 100%; /* Fazendo os inputs ficarem com largura total em telas pequenas */
+    margin-bottom: 1rem; /* Espaço entre os inputs */
+    margin: 0;
+  }
+
+  .input-box-2 input {
+    width: 70%; /* Tornando o input com largura total */
+    padding: 0 55px 0 20px;
+  }
+
+  .input-box-2 > button {
+    width: 100%; /* Botão com largura total */
+  }
+
 }

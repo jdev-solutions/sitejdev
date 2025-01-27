@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   margin: auto;
-  height: 500px; /* Ajusta a altura conforme o conteúdo */
+  height: 500px; /* Altura padrão para telas grandes */
   overflow: hidden;
 }
 
@@ -13,26 +13,33 @@
 }
 
 .carousel-item {
-  min-width: 100%; /* Garante que cada slide ocupe 100% da largura */
-  height: 100%; /* Ajusta a altura conforme o contêiner */
+  min-width: 100%; /* Cada slide ocupa 100% da largura */
+  height: 100%;
 }
 
 .carousel .teste {
-  width: 100%; /* Ajusta a imagem para ocupar toda a largura */
-  height: auto; /* Mantém a proporção da imagem */
-  display: block;
-  object-fit: cover;
-  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
 }
 
+/* Botões do carrossel */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
   color: #fff;
+  border: none;
   border-radius: 50%;
+  padding: 10px 15px;
   cursor: pointer;
   z-index: 10;
+  font-size: 1.5rem;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .carousel-btn.prev {
@@ -41,4 +48,65 @@
 
 .carousel-btn.next {
   right: 10px;
+}
+
+@media (min-width: 768px) {
+  .carousel-containerRespo {
+    display: none;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  .carousel-containerRespo {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-container {
+    display: none;
+  }
+
+  .carousel {
+    height: 100%; /* Reduz a altura em telas menores */
+  }
+  
+  .teste {
+    min-width: 100%; /* Cada slide ocupa 100% da largura */
+    height: 100%; /* Garante que o item ocupe toda a altura do carrossel */
+    display: flex; /* Alinha a imagem no centro */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que elementos ultrapassem o contêiner */
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 8px 12px; /* Botões menores */
+    display: none;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .carousel {
+    height: 100%; /* Reduz a altura em telas menores */
+  }
+  
+  .teste {
+    min-width: 100%; /* Cada slide ocupa 100% da largura */
+    height: 100%; /* Garante que o item ocupe toda a altura do carrossel */
+    display: flex; /* Alinha a imagem no centro */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que elementos ultrapassem o contêiner */
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 8px 12px; /* Botões menores */
+    display: none;
+  }
 }

@@ -48,3 +48,81 @@ h3{
   font-size: 1.3rem;
   text-align: center;
 }
+@media (max-width: 768px) {
+  h2{
+    font-size: 2rem;
+    margin: 50px 0 20px 0 ;
+    text-align: center;
+  }
+  h3{
+    font-size: 1.4rem;
+    margin: 20px 0 40px 0 ;
+    text-align: center;
+  }
+  .compro{
+    width: 90%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .img-box-compro > img {
+    width: 100%;
+    max-width: 20rem; /* Limita o tamanho máximo */
+    min-width: 15rem; /* Garante um tamanho mínimo */
+  }
+  .box{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .img-box-compro{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 60px 0 0px;
+  
+  }
+  .compro-main{
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  h2{
+    font-size: 2rem;
+    margin: 50px 0 20px 0 ;
+    text-align: center;
+  }
+  h3{
+    font-size: 1.4rem;
+    margin: 20px 0 40px 0 ;
+    text-align: center;
+  }
+  .compro{
+    width: 90%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .img-box-compro > img {
+    width: 100%;
+    max-width: 20rem; /* Limita o tamanho máximo */
+    min-width: 15rem; /* Garante um tamanho mínimo */
+  }
+  .box{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .img-box-compro{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 60px 0 0px;
+    
+  }
+  .compro-main{
+    width: 100%;
+  }
+}

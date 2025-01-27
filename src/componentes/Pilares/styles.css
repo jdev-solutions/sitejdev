@@ -68,3 +68,75 @@
 .pil > img{
   margin: auto;
 }
+
+@media (max-width: 768px) {
+  .subtitle-pilares{
+  font-size: 1.8rem;
+  }
+  .box-pilares{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .pilares-1{
+    margin: 0px 60px 0 0;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  .pilares-2{
+    margin: 30px 60px 0 0;
+
+  }
+  .pil > span, p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .pil > span{
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+  .pil > img{
+    margin: auto;
+  }
+  .pil{
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .subtitle-pilares{
+    font-size: 2.2rem;
+    }
+    .box-pilares{
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+    .pilares-1{
+      margin: 0px 60px 0 0;
+      width: 50px;
+      align-items: center;
+      justify-content: center;
+    }
+    .pilares-2{
+      margin: 30px 60px 0 0;
+  
+    }
+    .pil > span, p{
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .pil > span{
+      font-size: 1.5rem;
+      line-height: 25px;
+    }
+    .pil > img{
+      margin: auto;
+    }
+    .pil{
+      width: 300px;
+    }
+  }
