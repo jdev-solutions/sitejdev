@@ -101,9 +101,9 @@ function Contato() {
       }
   };
 
-  const [state, handleSubmit] = useForm('mwpvlqke');
+  const [state] = useForm('mwpvlqke');
   const [formErrors, setFormErrors] = useState<FormError[]>([]);
-  const [submitted, setSubmitted] = useState(false);
+  const [, setSubmitted] = useState(false);
 
   useEffect(() => {
     if (state.succeeded) {
