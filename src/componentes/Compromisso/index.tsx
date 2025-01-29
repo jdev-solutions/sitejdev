@@ -16,7 +16,7 @@ function Compromisso() {
           <p>Exclusividade</p>
         </div>
         <div className='img-box-compro'>
-          <img src={reu} alt="imagem dos donos" />
+          <img src={reu} className="margin-top-img" alt="imagem dos donos" />
           <p>Confiança</p>
         </div>
       </div>

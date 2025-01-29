@@ -53,24 +53,25 @@ h3{
 @media (max-width: 768px) {
   .sb-subtitle {
     font-size: 2rem;
-    margin: 50px 0 20px 0 ;
+    margin: 2px 0 2px 0 ;
     text-align: center;
   }
   .sb-mintitle{
     font-size: 1.3rem;
-    margin: 20px 0 40px 0 ;
+    margin: 2px 0 40px 0 ;
     text-align: center;
   }
   .main-sb{
     width: 100%;
   }
   .img-box > p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-bottom: 15px;
   }
   .img-box{
     align-items: center;
     justify-content: center;
+    padding-bottom: 0;
     display: flex;
   }
   .box-sb {
@@ -88,7 +89,9 @@ h3{
   .sb{
     width: 80%;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {

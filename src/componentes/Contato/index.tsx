@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import InputMask from 'react-input-mask';
 import Swal from 'sweetalert2';
+import send from '../../assets/send1.png';
 
 interface FormError {
   field: string;
@@ -165,7 +166,10 @@ function Contato() {
                   ) : null
                 )}
               </div>
-              <button type="submit" disabled={state.submitting} className="send-button">Enviar</button>
+              <button type="submit" disabled={state.submitting} className="send-button">
+                Enviar 
+                <img src={send} className="enviar-send" alt='icone' />
+              </button>
             </div>
           </div>
         </>

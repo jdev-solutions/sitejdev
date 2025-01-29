@@ -53,7 +53,7 @@ label{
     height: 3rem;
     border-radius: 1rem;
     border: 2px solid gray;
-    padding: 0 55px 0 20px;
+    padding: 0 60px 0 20px;
   }
 }
 .input-box-2 > button{
@@ -62,8 +62,20 @@ label{
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   height: 3.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  gap: .5rem;
+}
+.enviar-send {
+  width: 20px;
+  height: 20px;
+  transform: rotate(30deg);
+  margin: 0;
+  padding: 0;
 }
 .input-box-2 > button:hover{
   background-color: #092744;
@@ -76,9 +88,12 @@ label{
   }
 
   .subtitle-contato {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 30px 0 20px 0 ;
     text-align: center;
+    margin: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
   }
 
   .contato-box {
@@ -111,11 +126,13 @@ label{
 
   .input-box-2 input {
     width: 70%; /* Tornando o input com largura total */
-    padding: 0 55px 0 20px;
+    padding: 0 60px 0 20px;
   }
 
   .input-box-2 > button {
     width: 100%; /* Botão com largura total */
+    gap: .5rem;
+
   }
 }
 
@@ -166,6 +183,7 @@ label{
 
   .input-box-2 > button {
     width: 100%; /* Botão com largura total */
+    gap: .5rem;
   }
 
 }

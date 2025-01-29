@@ -54,6 +54,9 @@
   .carousel-containerRespo {
     display: none;
   }
+  .carousel-container-tv {
+    display: none;
+  }
 }
 
 /* Responsividade */
@@ -66,6 +69,10 @@
   }
 
   .carousel-container {
+    display: none;
+  }
+
+  .carousel-container-tv {
     display: none;
   }
 
@@ -107,6 +114,40 @@
   .carousel-btn {
     font-size: 1.2rem;
     padding: 8px 12px; /* Botões menores */
+  }
+}
+
+/* Responsividade */
+@media (min-width: 1800px) {
+  .carousel-container {
     display: none;
+  }
+
+  .carousel-containerRespo {
+    display: none;
+  }
+
+  .carousel-container-tv {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel {
+    height: 100%; /* Reduz a altura em telas menores */
+  }
+  
+  .teste {
+    min-width: 100%; /* Cada slide ocupa 100% da largura */
+    height: 100%; /* Garante que o item ocupe toda a altura do carrossel */
+    display: flex; /* Alinha a imagem no centro */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que elementos ultrapassem o contêiner */
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 8px 12px; /* Botões menores */
   }
 }

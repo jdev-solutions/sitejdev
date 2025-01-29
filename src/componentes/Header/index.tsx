@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import jdevlogo from '../../../public/logo-principal.svg';
+import jdevlogo from '../../../public/logo-principaljdev.svg';
+import menuhambu from '../../assets/menu.png';
 import './styles.css';
 
 function Header() {
@@ -25,7 +26,7 @@ function Header() {
           </ul>
         </nav>
         <button className="menu-toggle" onClick={toggleMenu}>
-          ☰
+          <img src={menuhambu} className="menu-hambu" alt="Menu Hamburger" />
         </button>
         <a href="https://wa.me/5511947647670?text=Olá!%20Quero%20fazer%20um%20orçamento!" target="_blank">
           <button className="contact-btn">Entre em contato</button>

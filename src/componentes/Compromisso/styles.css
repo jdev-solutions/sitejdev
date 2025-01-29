@@ -48,6 +48,7 @@ h3{
   font-size: 1.3rem;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   h2{
     font-size: 2rem;
@@ -62,7 +63,9 @@ h3{
   .compro{
     width: 90%;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   .img-box-compro > img {
     width: 100%;
@@ -83,8 +86,30 @@ h3{
     margin: 0 60px 0 0px;
   
   }
+
+  .img-box-compro p{
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
   .compro-main{
     width: 100%;
+  }
+
+  .compro-main h2{
+    font-size: 2rem;
+    margin: 40px 0 2px 0 ;
+    text-align: center;
+  }
+
+  .compro-main h3{
+    font-size: 1.3rem;
+    margin: 2px 0 40px 0 ;
+    text-align: center;
+  }
+
+  .margin-top-img {
+    margin-top: 2.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {

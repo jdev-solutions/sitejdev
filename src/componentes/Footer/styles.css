@@ -40,6 +40,11 @@
   cursor: pointer;
 }
 
+.footer-contact a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
 .footer-bottom {
   border-top: 1px solid #333;
   margin-top: 20px;
@@ -50,7 +55,8 @@
 }
 @media (max-width: 768px) {
   .footer{
-   padding: 20px 20px 60px 20px;
+    height: 17rem;
+    padding: 20px 20px 60px 20px;
   }
   .footer-logo{
     img{
@@ -61,5 +67,10 @@
   .footer-content {
     display: flex;
     flex-direction: column;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

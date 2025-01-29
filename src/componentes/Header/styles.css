@@ -79,6 +79,7 @@
     gap: 1rem;
     display: none; /* Esconde o menu por padrão */
     text-align: end;
+    margin-right: 3rem;
   }
 
   .nav-links.active {
@@ -89,6 +90,11 @@
     display: none;
   }
 
+  .menu-hambu {
+    width: 30px;
+    height: 30px;
+  }
+
   .menu-toggle {
     background: none;
     border: none;
@@ -96,5 +102,7 @@
     font-size: 1.5rem;
     cursor: pointer;
     margin-right: auto;
+    /* height: 100px;
+    width: 100px; */
   }
 }
