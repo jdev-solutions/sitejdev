@@ -1,0 +1,131 @@
+.compro-main-duv{
+    background-color: white;
+    margin: auto;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .h2-duv{
+    margin: 0rem 3rem 3rem 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+  } 
+  .h3-duv{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: grey;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: white;
+  }
+  .box-duv{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      width: 50rem
+  }
+  .img-box-duv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #003366;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    gap: 1rem;
+  }
+  .img-box-duv:hover{
+    background-color: #092744;
+  }
+  .img-box-duv > p{
+    color: grey;
+    font-size: 1rem;
+    width: 38rem;
+    color: white;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+  }
+  .final{
+    margin-bottom: 3rem;
+  }
+ 
+  
+  @media (max-width: 768px) {
+    .h2-duv{
+      font-size: 2rem;
+      text-align: center;
+    }
+    .h3-duv{
+        text-align: center;
+        font-size: 1.3rem;
+        margin: 0 0 1rem 0 ;
+    }
+    .box-duv{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .img-box-duv{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+        width: 40%;
+        gap: 0;
+        padding: 2rem;
+    }
+    .img-box-duv p{
+      font-size: 1.3rem;
+      padding: 0 2rem;
+      width: 100%;
+      margin: 0;
+    }
+    .compro-main-duv{
+      width: 90%;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1200px) {
+    h2{
+      font-size: 2rem;
+      margin: 50px 0 20px 0 ;
+      text-align: center;
+    }
+    h3{
+      font-size: 1.4rem;
+      margin: 20px 0 40px 0 ;
+      text-align: center;
+    }
+    .compro{
+      width: 90%;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+    .img-box-compro > img {
+      width: 100%;
+      max-width: 20rem; /* Limita o tamanho máximo */
+      min-width: 15rem; /* Garante um tamanho mínimo */
+    }
+    .box{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+    .img-box-compro{
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 0 60px 0 0px;
+      
+    }
+    .compro-main{
+      width: 100%;
+    }
+  }

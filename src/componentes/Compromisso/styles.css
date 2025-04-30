@@ -1,14 +1,20 @@
 .compro-main{
   background-color: white;
   padding: 1 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
 }
-h2{
-  margin: 50px 0 15px 200px;
+.sub-compro{
+  margin: 1.5rem;
+  margin-bottom: .5rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
 } 
-h3{
-  margin: 0 0 30px 250px;
+.sub-compro-2{
+  margin: 1.5rem;
+  margin-bottom: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   color: grey;
@@ -16,7 +22,6 @@ h3{
 }
 .box{
     max-width: 1280px; 
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,14 +55,13 @@ h3{
 }
 
 @media (max-width: 768px) {
-  h2{
+  .sub-compro{
     font-size: 2rem;
     margin: 50px 0 20px 0 ;
     text-align: center;
   }
   h3{
     font-size: 1.4rem;
-    margin: 20px 0 40px 0 ;
     text-align: center;
   }
   .compro{
@@ -83,10 +87,8 @@ h3{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 0 60px 0 0px;
-  
-  }
 
+  }
   .img-box-compro p{
     font-size: 1.4rem;
     margin-bottom: 15px;
@@ -113,14 +115,12 @@ h3{
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
-  h2{
+  .sub-compro{
     font-size: 2rem;
-    margin: 50px 0 20px 0 ;
     text-align: center;
   }
-  h3{
+  .sub-compro-2{
     font-size: 1.4rem;
-    margin: 20px 0 40px 0 ;
     text-align: center;
   }
   .compro{
@@ -144,7 +144,6 @@ h3{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 0 60px 0 0px;
     
   }
   .compro-main{
