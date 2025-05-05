@@ -57,13 +57,13 @@
   
   @media (max-width: 768px) {
     .h2-duv{
-      font-size: 2rem;
+      font-size: 1.7rem;
       text-align: center;
     }
     .h3-duv{
         text-align: center;
-        font-size: 1.3rem;
-        margin: 0 0 1rem 0 ;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
     .box-duv{
       align-items: center;
@@ -71,23 +71,26 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      margin: 0 2rem;
+      width: 80%;
+      
     }
     .img-box-duv{
       align-items: center;
       justify-content: center;
       display: flex;
-        width: 40%;
-        gap: 0;
-        padding: 2rem;
+      margin: auto;
+      width: 80%;
+      padding: 2rem;
     }
     .img-box-duv p{
-      font-size: 1.3rem;
+      font-size: 1rem;
       padding: 0 2rem;
       width: 100%;
       margin: 0;
     }
     .compro-main-duv{
-      width: 90%;
+      width: 100%;
     }
   }
   @media (min-width: 768px) and (max-width: 1200px) {

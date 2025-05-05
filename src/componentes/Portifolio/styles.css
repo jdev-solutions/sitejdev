@@ -72,10 +72,11 @@
   
   @media (max-width: 768px) {
     .pt-subtitle {
-      font-size: 2rem;
+      font-size: 1.7rem;
       text-align: center;
       margin: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      margin-top: 5rem;
     }
     .port-h2{
         font-size: 1.2rem;
@@ -91,6 +92,8 @@
       justify-content: center;
       padding-bottom: 0;
       display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .box-pt {
       gap: 35px;
@@ -101,6 +104,7 @@
     }
     .img-box-pt > img {
       width: 100%;
+      margin: auto;
       max-width: 20rem; /* Limita o tamanho máximo */
       min-width: 15rem; /* Garante um tamanho mínimo */
     }

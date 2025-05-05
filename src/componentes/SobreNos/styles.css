@@ -55,15 +55,14 @@
 }
 
 
-
 @media (max-width: 768px) {
   .sb-subtitle {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 2px 0 2px 0 ;
     text-align: center;
   }
   .sb-mintitle{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 2px 0 40px 0 ;
     text-align: center;
   }

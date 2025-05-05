@@ -178,9 +178,10 @@ function Pacotes() {
           
          </div>
       </div>
-      <p className='compro'> 
-      Na JDev Solutions, entendemos que cada empresa tem necessidades únicas. Por isso, além dos pacotes oferecidos, também fazemos serviços personalizados, criando soluções sob medida para o seu projeto.
-      <br /> <br /> Clique no botão abaixo para conhecer todos os nossos pacotes e descobrir como podemos ajudar o seu negócio a se destacar no digital!</p>
+      <div className="compro-div">
+          <p>Na JDev Solutions, entendemos que cada empresa tem necessidades únicas. Por isso, além dos pacotes oferecidos, também fazemos serviços personalizados, criando soluções sob medida para o seu projeto.
+          <br /> <br /> Clique no botão abaixo para conhecer todos os nossos pacotes e descobrir como podemos ajudar o seu negócio a se destacar no digital!</p>
+      </div>
 
 
       <a href="https://www.figma.com/design/QChtMjrnVVwj54lrNi5ExS/JDev-Solutions?node-id=1509-2&p=f&t=eYN1foIuyPImtfS2-0" target="_blank">

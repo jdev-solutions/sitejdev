@@ -10,7 +10,7 @@ import video from '../../assets/video (2) 1.png'
 function Servicos() {
   return (
     <header className="main" id='services'>
-        <h2 className='subtitle-serv'>Tudo para sua empresa</h2>
+        <h2 className='s-serv'>Tudo para sua empresa</h2>
       <div className="box">
         <div className="servicos">
             <li className='serv'>
@@ -35,8 +35,8 @@ function Servicos() {
             </li>
             <li className='serv'>
             <img src={video} alt="icon de video" />
-              <span>Cursos</span>
-              <p>Aulas <br /> completas</p>
+              <span className='curs'>Cursos</span>
+              <p>Aulas completas</p>
             </li>
             <li className='serv'>
             <img src={book} alt="icon de livro" />

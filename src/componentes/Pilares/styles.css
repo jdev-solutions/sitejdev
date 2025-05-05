@@ -75,6 +75,7 @@
     font-size: 1.7rem;
     text-align: center;
     padding: 0.5rem;
+    margin-top: 2rem;
   }
   .box-pilares{
     flex-direction: column;
