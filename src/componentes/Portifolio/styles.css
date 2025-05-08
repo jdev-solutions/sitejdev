@@ -10,6 +10,7 @@
     margin-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
+    text-align: center;
   } 
   .box-pt{
       max-width: 1000px; 
@@ -68,6 +69,16 @@
   .contact-btn-port:hover {
     background-color: #0c4074;
   }
+
+  .img-box-pt img {
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .img-box-pt img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
   
   
   @media (max-width: 768px) {
@@ -83,17 +94,11 @@
         width: 80%;
         margin-bottom: 0;
     }
-    .main-pt{
-      width: 95%;
-    }
-   
     .img-box-pt{
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-bottom: 0;
     }
     .box-pt {
       gap: 35px;
@@ -104,9 +109,9 @@
     }
     .img-box-pt > img {
       width: 100%;
-      margin: auto;
       max-width: 20rem; /* Limita o tamanho máximo */
       min-width: 15rem; /* Garante um tamanho mínimo */
+      margin-left: -5px;
     }
     .pt{
       width: 80%;

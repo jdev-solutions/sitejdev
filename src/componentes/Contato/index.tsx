@@ -1,8 +1,7 @@
-
 import './styles.css';
-import React, { useEffect, useState } from 'react';
-import { useForm, ValidationError } from '@formspree/react';
-import InputMask from 'react-input-mask';
+import { useEffect, useState, ChangeEvent, FormEvent } from 'react';
+import { useForm } from '@formspree/react';
+import InputMask from '../InputMask';
 import Swal from 'sweetalert2';
 import send from '../../assets/send1.png';
 
@@ -12,25 +11,24 @@ interface FormError {
 }
 
 function Contato() {
-
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     message: '',
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [formTitle, setFormTitle] = useState('Faça um orçamento sem compromisso!');
+  const [formErrors, setFormErrors] = useState<FormError[]>([]);
+  const [state] = useForm('mwpvlqke');
+  const [, setSubmitted] = useState(false);
 
-  const localHandleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const localHandleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     let hasErrors = false;
@@ -52,39 +50,29 @@ function Contato() {
     }
 
     if (hasErrors) {
-      const errorArray: FormError[] = Object.entries(newErrors).map(([field, message]) => ({
-        field,
-        message,
-      }));
+      const errorArray: FormError[] = Object.entries(newErrors).map(([field, message]) => ({ field, message }));
       setFormErrors(errorArray);
       return;
     }
 
     try {
-      // Código para enviar o formulário para o serviço Formspree
       const response = await fetch('https://formspree.io/f/mwpvlqke', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        // console.log('Formulário enviado com sucesso!');
-        setIsFormSubmitted(true); 
-        // Exibe o SweetAlert2
+        setIsFormSubmitted(true);
         Swal.fire({
           icon: 'success',
           title: 'Formulário enviado!',
           text: 'Obrigado pelo contato! Te chamaremos em breve.',
           confirmButtonText: 'Fechar',
         }).then(() => {
-          // Altera o título do formulário ao fechar o Swal
           setFormTitle('Obrigado por enviar! Recarregue a página.');
         });
 
-        // Limpa os dados do formulário
         setFormData({ name: '', phone: '', message: '' });
       } else {
         Swal.fire({
@@ -93,88 +81,75 @@ function Contato() {
           text: 'Houve um problema ao enviar o formulário. Tente novamente.',
         });
       }
-      } catch (error) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Erro de conexão',
-          text: 'Não foi possível enviar o formulário. Verifique sua conexão.',
-        });
-      }
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Erro de conexão',
+        text: 'Não foi possível enviar o formulário. Verifique sua conexão.',
+      });
+    }
   };
-
-  const [state] = useForm('mwpvlqke');
-  const [formErrors, setFormErrors] = useState<FormError[]>([]);
-  const [, setSubmitted] = useState(false);
 
   useEffect(() => {
     if (state.succeeded) {
       setSubmitted(true);
-
       setTimeout(() => {
         window.location.href = 'https://jdevsolutions.com.br/';
-      }, 3000); // 3 segundos
+      }, 3000);
     } else if (state.errors) {
-      // Submissão com erro
-      const errorArray: FormError[] = Object.entries(state.errors).map(([field, message]) => ({
-        field,
-        message: message as unknown as string,
-      }));
-      setFormErrors(errorArray);
+      // se quiser mapear os erros da API Formspree, adapte aqui
     }
-  }, [state.succeeded, state.errors])
+  }, [state.succeeded, state.errors]);
+
+  const getFieldError = (fieldName: string) =>
+    formErrors.find((error) => error.field === fieldName)?.message;
 
   return (
-    <header className="main-contato" id='contact'>
-        <h2 className='subtitle-contato'>{formTitle}</h2>
-        <form action="contato-form" onSubmit={localHandleSubmit}>
+    <header className="main-contato" id="contact">
+      <h2 className="subtitle-contato">{formTitle}</h2>
+      <form onSubmit={localHandleSubmit}>
         {!isFormSubmitted && (
-        <>
           <div className="contato-box">
             <div className="input-box-1">
               <div className="input-div">
                 <label htmlFor="name">Nome</label>
-                <input type="text" id='name' name='name' value={formData.name} onChange={handleInputChange}/>
-                {formErrors.map((error) =>
-                  error.field === 'name' ? <ValidationError errors={[]} key={error.field}>{error.message}</ValidationError> : null
-                )}
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} />
+                {getFieldError('name') && <p className="error">{getFieldError('name')}</p>}
               </div>
+
               <div className="input-div">
                 <label htmlFor="phone">Telefone</label>
-                  <InputMask
-                    mask="(99) 99999-9999"
-                    maskChar=""
-                    type="text"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="(00) 00000-0000"
-                  />
-                {formErrors.map((error) =>
-                  error.field === 'phone' ? <ValidationError errors={[]} key={error.field}>{error.message}</ValidationError> : null
-                )}
+                <InputMask
+                  mask="(99) 99999-9999"
+                  maskChar=""
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="(00) 00000-0000"
+                />
+                {getFieldError('phone') && <p className="error">{getFieldError('phone')}</p>}
               </div>
             </div>
+
             <br />
+
             <div className="input-box-2">
               <div className="input-div">
                 <label htmlFor="message">O que você precisa?</label>
                 <input type="text" id="message" name="message" value={formData.message} onChange={handleInputChange} />
-                {formErrors.map((error) =>
-                  error.field === 'message' ? (
-                    <ValidationError errors={[]} key={error.field}>{error.message}</ValidationError>
-                  ) : null
-                )}
+                {getFieldError('message') && <p className="error">{getFieldError('message')}</p>}
               </div>
+
               <button type="submit" disabled={state.submitting} className="send-button">
-                Enviar 
-                <img src={send} className="enviar-send" alt='icone' />
+                Enviar
+                <img src={send} className="enviar-send" alt="icone" />
               </button>
             </div>
           </div>
-        </>
         )}
-        </form>
+      </form>
     </header>
   );
 }

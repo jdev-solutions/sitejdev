@@ -1,5 +1,5 @@
 import './styles.css';
-import jdevlogo from '../../../public/logo-principaljdev.svg';
+import jdevlogo from '../../../public/jdevlogo.svg';
 import email from '../../assets/email.png';
 import whats from '../../assets/whats.png';
 import insta from '../../assets/insta.png';

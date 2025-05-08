@@ -80,18 +80,22 @@
   .box-pilares{
     flex-direction: column;
     width: 100%;
+    display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
+    padding: 0;
   }
   .pilares-1{
-    margin: 0px 60px 0 0;
     width: 50px;
     align-items: center;
     justify-content: center;
   }
   .pilares-2{
-    margin: 30px 60px 0 0;
-
+    /* margin: 30px 60px 0 0; */
+    width: 50px;
+    align-items: center;
+    justify-content: center;
   }
   .pil > span, p{
     color: white;

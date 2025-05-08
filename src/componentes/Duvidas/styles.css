@@ -1,134 +1,82 @@
-.compro-main-duv{
-    background-color: white;
-    margin: auto;
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .h2-duv{
-    margin: 0rem 3rem 3rem 3rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-  } 
-  .h3-duv{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: grey;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0;
-    color: white;
-  }
-  .box-duv{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      width: 50rem
-  }
-  .img-box-duv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #003366;
-    padding: 1.5rem;
-    border-radius: 2rem;
-    gap: 1rem;
-  }
-  .img-box-duv:hover{
-    background-color: #092744;
-  }
-  .img-box-duv > p{
-    color: grey;
-    font-size: 1rem;
-    width: 38rem;
-    color: white;
-    font-weight: 100;
-    font-style: italic;
-    text-align: center;
-  }
-  .final{
-    margin-bottom: 3rem;
-  }
- 
-  
-  @media (max-width: 768px) {
-    .h2-duv{
-      font-size: 1.7rem;
-      text-align: center;
-    }
-    .h3-duv{
-        text-align: center;
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-    }
-    .box-duv{
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin: 0 2rem;
-      width: 80%;
-      
-    }
-    .img-box-duv{
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      margin: auto;
-      width: 80%;
-      padding: 2rem;
-    }
-    .img-box-duv p{
-      font-size: 1rem;
-      padding: 0 2rem;
-      width: 100%;
-      margin: 0;
-    }
-    .compro-main-duv{
-      width: 100%;
-    }
-  }
-  @media (min-width: 768px) and (max-width: 1200px) {
-    h2{
-      font-size: 2rem;
-      margin: 50px 0 20px 0 ;
-      text-align: center;
-    }
-    h3{
-      font-size: 1.4rem;
-      margin: 20px 0 40px 0 ;
-      text-align: center;
-    }
-    .compro{
-      width: 90%;
-      text-align: center;
-      font-size: 1.4rem;
-    }
-    .img-box-compro > img {
-      width: 100%;
-      max-width: 20rem; /* Limita o tamanho máximo */
-      min-width: 15rem; /* Garante um tamanho mínimo */
-    }
-    .box{
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-    }
-    .img-box-compro{
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      margin: 0 60px 0 0px;
-      
-    }
-    .compro-main{
-      width: 100%;
-    }
-  }
+.duvidas-container {
+  background: white;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.h2-duv {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-item {
+  background-color: #003366;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-item:hover {
+  background-color: #092744;
+}
+
+.accordion-title {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: white;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+}
+
+.iconPlus {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+
+.accordion-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.accordion-title-container:hover .iconPlus {
+  transform: scale(1.1);
+}
+
+.hover-hint {
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  font-size: 0.7rem;
+  color: #ccc;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.accordion-title-container:hover .hover-hint {
+  opacity: 1;
+}

@@ -102,6 +102,9 @@ label{
     border: none;
     align-items: center;
     justify-content: center;
+    border: 2px solid rgba(128, 128, 128, 0.486);
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .input-box-1 {
@@ -117,6 +120,7 @@ label{
   .contato-box {
     padding: 1rem;
     margin-bottom: 60px;
+    border: 2px solid rgba(128, 128, 128, 0.486);
   }
 
   .input-box-1 input {
@@ -171,6 +175,7 @@ label{
   .contato-box {
     padding: 1rem;
     margin-bottom: 60px;
+    border: 2px solid rgba(128, 128, 128, 0.486);
   }
 
   .input-box-1 input {
