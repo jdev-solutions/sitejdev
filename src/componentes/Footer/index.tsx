@@ -16,7 +16,7 @@ function Footer() {
         </div>
         <div className="footer-contact">
 
-          <p> <a href="https://gmail.com" target="_blank" className="logo-link"><img src={email} className="iconcontact" alt="e-mail" /> contato.jdevsolutions@gmail.com </a></p>
+          <p> <a href="https://gmail.com" target="_blank" className="logo-link"><img src={email} className="iconcontact" alt="e-mail" /> suporte@jdevsolutions.com.br </a></p>
 
           <p> <a href="https://wa.me/5511947647670?text=Olá!%20Quero%20fazer%20um%20orçamento!"target="_blank"className="logo-link"><img src={whats} className="iconcontact" alt="whats" /> +55 11 94764-7670 </a></p>
 
